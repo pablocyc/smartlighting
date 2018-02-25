@@ -9,6 +9,14 @@
 	height: auto;
 }
 
-.boton-on {
-	height: 100px;
+.copyright {
+	min-height: 50px;
+}
+
+.madeby {
+	padding: 10px;
+}
+
+.footer {
+	text-align: justify;
 }
