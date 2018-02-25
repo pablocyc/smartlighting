@@ -3,3 +3,8 @@
 .brand-logo {
 	margin: 6px 0 4px 60px;
 }
+
+.image-home {
+	max-width: 100%;
+	height: auto;
+}
