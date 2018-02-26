@@ -1,0 +1,22 @@
+{
+  "name": "smartlighting",
+  "version": "1.0.0",
+  "description": "Controla tu casa desde SmartLighting",
+  "main": "server.js",
+  "scripts": {
+    "reset": "firmata-party uno COM4 --debug"
+  },
+  "keywords": [
+    "arduino",
+    "nodejs",
+    "web-online",
+    "smartlighting"
+  ],
+  "author": "Pablo Cardozo <pablocyc83@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2",
+    "firmata-party": "^1.5.9",
+    "johnny-five": "^0.14.1"
+  }
+}
