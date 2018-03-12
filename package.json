@@ -4,7 +4,9 @@
   "description": "Controla tu casa desde SmartLighting",
   "main": "server.js",
   "scripts": {
-    "reset": "firmata-party uno COM4 --debug"
+    "reset": "firmata-party uno COM4 --debug",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "keywords": [
     "arduino",
@@ -18,5 +20,8 @@
     "express": "^4.16.2",
     "firmata-party": "^1.5.9",
     "johnny-five": "^0.14.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.1"
   }
 }

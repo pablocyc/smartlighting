@@ -1,3 +1,4 @@
+const path = require('path')
 const express = require('express');
 const five = require("johnny-five");
 
@@ -7,16 +8,12 @@ let board = new five.Board({port: 'COM4'});
 
 app.use(express.static('public'));
 
-app.get('/on', encender);
-app.get('/off', apagar);
+app.get('/on-off', encender);
+
 
 function encender(peticion, resultado) {
-	resultado.send(arduino(1));
+	resultado.send(arduino());
 }
-function apagar(peticion, resultado) {
-	resultado.send(arduino(0));
-}
-
 
 
 app.listen(3000, function(err) {
@@ -24,13 +21,13 @@ app.listen(3000, function(err) {
 	console.log('Escuchando en el puerto 3000');
 })
 
-
+var flagState = false;
 board.on("ready", arduino);
 
-function arduino(state) {
+function arduino() {
 	let led = new five.Led(13);
-	if(state) led.on();
-	else led.off();
+	if(flagState) led.on(), flagState = false;
+	else led.off(), flagState = true;
 }
 
 // board.on("ready", function() {

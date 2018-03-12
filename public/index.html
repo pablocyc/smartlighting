@@ -53,14 +53,17 @@
 					<img class="responsive-img image-home" src="images/smarthome.jpg" alt="smarthome">					
 				</div>
 				<div class="col s12 m3 l3 center">
-					<h2 id="plataBaja">Planta Baja</h2>
-					<a href="#">
-						<img class="boton-on" src="images/lampOn.png" alt="button On"  height="100px">
+					<h2 id="texto_piso">Planta Baja</h2>
+					<a href="on-off" target="dummyframe" id="boton">
+						<img id="img-boton" src="images/lampOff.png" alt="button On"  height="100px">						
+					</a>					
 					</a>
 				</div>
 			</div>
 		</div>
 	</section>
+
+	<iframe width="0" height="0" border="0" name="dummyframe" position='absolute' style="display: none;"></iframe>
 
 	<section class="footer orange">
 		<div class="container">
@@ -89,6 +92,7 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 	 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 	 <script>$(".button-collapse").sideNav();</script>
+	 <script src="js/main.js"></script>
 </body>
 </html>
 	
